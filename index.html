@@ -7,7 +7,15 @@
           href="css/index.css">
 </head>
 <body class="">
+
+<div class="all-hide"></div>
+
 <header class="header">
+    
+    <div class="header-menu">
+    
+    </div>
+    
     <div class="header-content">
         <svg
                 width="293"
@@ -86,19 +94,20 @@
                 </clipPath>
             </defs>
         </svg>
-
-        <ul class="nav-list">
-            <li>Кошелек</li>
-            <li>Настройки</li>
-            <li>Разработка</li>
-            <li>Поддержка</li>
-            <li>Подробно</li>
-            <li>
-                <a class="blue-button">
-                    скачать
-                </a>
-            </li>
-        </ul>
+        
+        <div class="d-flex">
+            <ul class="nav-list">
+                <li class="nav-list__menu">Кошелек</li>
+                <li class="nav-list__menu">Настройки</li>
+                <li class="nav-list__menu">Разработка</li>
+                <li class="nav-list__menu">Поддержка</li>
+                <li class="nav-list__menu">Подробно</li>
+            </ul>
+            
+            <a class="blue-button">
+                скачать
+            </a>
+        </div>
     </div>
 </header>
 
@@ -144,5 +153,7 @@
         </li>
     </ul>
 </section>
+
+<script src="js/index.js"></script>
 </body>
 </html>
