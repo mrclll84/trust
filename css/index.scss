@@ -156,18 +156,35 @@ a {
 }
 
 .download {
-    max-width:        1200px;
-    width:            100%;
-    margin:           64px auto 5rem;
-    background-color: #0500ff;
-    color:            white;
-    padding:          64px 100px;
-    border-radius:    30px;
+    margin:  64px 0 5rem;
+    padding: 0 40px;
+
+    @media (max-width: 768px) {
+        margin-bottom: 16px;
+    }
+
+    &-content {
+        padding:          64px 100px;
+        background-color: #0500ff;
+        color:            white;
+        border-radius:    30px;
+        max-width:        1200px;
+        width:            100%;
+        margin:           0 auto;
+
+        @media (max-width: 768px) {
+            padding: 20px 40px;
+        }
+    }
 
     &-title {
         font-size:   3.25rem;
         line-height: 3.75rem;
         margin:      0;
+        @media (max-width: 768px) {
+            font-size:   2.375rem;
+            line-height: 2.8rem;
+        }
     }
 
     &-description {
@@ -181,11 +198,16 @@ a {
     max-width: 1000px;
     width:     100%;
     margin:    0 auto 80px;
+    padding:   0 40px;
 
     &-content {
         display:               grid;
         grid-template-columns: repeat(2, 1fr);
         gap:                   1.5rem;
+
+        @media (max-width: 768px) {
+            grid-template-columns: 1fr;
+        }
 
         &__item {
             padding:          40px;
@@ -236,6 +258,16 @@ a {
             'logo download social';
     gap:              20px;
 
+    @media (max-width: 1024px) {
+        grid-template-areas:
+            'social'
+            'list'
+            'download'
+            'logo';
+        align-items: center;
+        gap: 40px;
+    }
+
     &-logo {
         display:         flex;
         flex-direction:  column;
@@ -249,6 +281,10 @@ a {
 
         img + img {
             margin-top: 16px;
+        }
+
+        @media (max-width: 1024px) {
+            margin: 0 auto;
         }
     }
 
@@ -285,10 +321,20 @@ a {
         grid-area: download;
         max-width: 406px;
 
+        @media (max-width: 1024px) {
+            max-width: 100%;
+        }
+
+
         strong {
             font-size:   .75rem;
             line-height: 1.125rem;
             color:       rgb(36 36 38 / 1);
+            @media (max-width: 1024px) {
+                display:    inline-block;
+                text-align: center;
+                width:      100%;
+            }
         }
 
         p {
@@ -296,6 +342,9 @@ a {
             font-size:   .75rem;
             color:       rgb(27 27 28 / 1);
             margin:      4px 0 16px;
+            @media (max-width: 1024px) {
+                text-align: center;
+            }
         }
 
         a {
@@ -312,6 +361,12 @@ a {
             font-size:       13px;
 
             transition:      all .3s ease-in-out;
+
+            @media (max-width: 1024px) {
+                justify-content: center;
+                gap: 10px;
+                max-width: 330px !important;
+            }
 
             &:hover {
                 color:            white;
@@ -337,20 +392,36 @@ a {
             display:   flex;
             flex-wrap: wrap;
             gap:       .75rem;
+
+            @media (max-width: 1024px) {
+                flex-direction: column;
+            }
         }
     }
 
     &-socials {
-        grid-area: social;
-        display: flex;
-        flex-direction: column;
+        grid-area:       social;
+        display:         flex;
+        flex-direction:  column;
         justify-content: flex-end;
+
+        @media (max-width: 1024px) {
+            margin: 0 auto;
+
+            strong {
+                text-align: center;
+            }
+        }
 
         &__list {
             margin-top:  25px;
             display:     flex;
             align-items: center;
             gap:         .75rem;
+
+            @media (max-width: 1024px) {
+                margin-top: 12px;
+            }
         }
     }
 }
