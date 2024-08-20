@@ -14,3 +14,13 @@ for (const menu of menues) {
         allHide.classList.add('open')
     })
 }
+
+headerMenu.addEventListener('mouseover', event => {
+    headerMenu.classList.add('open')
+    allHide.classList.add('open')
+})
+
+headerMenu.addEventListener('mouseout', event => {
+    headerMenu.classList.remove('open')
+    allHide.classList.remove('open')
+})

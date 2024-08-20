@@ -122,7 +122,7 @@ a {
   height: auto;
 }
 
-.text-trustBlue {
+.text-trustBlue, .footer-download a {
   --tw-text-opacity: 1;
   color: rgb(5, 0, 255);
 }
@@ -205,6 +205,116 @@ a {
   line-height: 1.625rem;
   letter-spacing: -0.025em;
   color: rgb(27, 27, 28);
+}
+
+.footer {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto 40px;
+  padding: 48px 80px;
+  border-radius: 30px;
+  border: 1px solid rgb(219, 220, 229);
+  background-color: rgb(244, 244, 247);
+  display: grid;
+  grid-template-areas: "logo list list" "logo download social";
+  gap: 20px;
+}
+.footer-logo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  max-width: 180px;
+  grid-area: logo;
+}
+.footer-logo img {
+  max-width: 180px;
+}
+.footer-logo img + img {
+  margin-top: 16px;
+}
+.footer-lists {
+  grid-area: list;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.footer-lists strong {
+  font-size: 0.75rem;
+  line-height: 1.125rem;
+  color: rgb(36, 36, 38);
+}
+.footer-lists li {
+  max-width: 110px;
+}
+.footer-lists li nav {
+  margin-top: 16px;
+  display: grid;
+  gap: 0.5rem;
+}
+.footer-lists a {
+  font-size: 0.9375rem;
+  line-height: 1.375rem;
+  color: rgb(27, 27, 28);
+}
+.footer-download {
+  grid-area: download;
+  max-width: 406px;
+}
+.footer-download strong {
+  font-size: 0.75rem;
+  line-height: 1.125rem;
+  color: rgb(36, 36, 38);
+}
+.footer-download p {
+  line-height: 1.375rem;
+  font-size: 0.75rem;
+  color: rgb(27, 27, 28);
+  margin: 4px 0 16px;
+}
+.footer-download a {
+  font-weight: 500;
+  line-height: 0.9375rem;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px;
+  border: 1px solid rgb(5, 0, 255);
+  border-radius: 9999px;
+  font-size: 13px;
+  transition: all 0.3s ease-in-out;
+}
+.footer-download a:hover {
+  color: white;
+  background-color: rgb(5, 0, 255);
+}
+.footer-download a:hover path {
+  fill: white !important;
+}
+.footer-download a img {
+  width: 16px;
+  height: 18px;
+}
+.footer-download a svg {
+  position: relative;
+  top: -2px;
+}
+.footer-download__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+.footer-socials {
+  grid-area: social;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+.footer-socials__list {
+  margin-top: 25px;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
 }
 
 /*# sourceMappingURL=index.css.map */
