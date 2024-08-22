@@ -1025,7 +1025,7 @@ a {
         }
 
         .mini-header__action {
-            display: block;
+            display: flex;
             margin-top: auto;
             @extend .default-transition;
             color:            white;
@@ -1039,7 +1039,6 @@ a {
             text-transform:   capitalize;
             justify-content:  center;
             align-items:      center;
-            margin-left:      40px;
             height:           36px;
 
             &:hover {

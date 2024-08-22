@@ -1019,7 +1019,7 @@ a {
   flex-direction: column;
 }
 .mini-header.is-active .mini-header__action {
-  display: block;
+  display: flex;
   margin-top: auto;
   color: white;
   font-weight: 500;
@@ -1032,7 +1032,6 @@ a {
   text-transform: capitalize;
   justify-content: center;
   align-items: center;
-  margin-left: 40px;
   height: 36px;
 }
 .mini-header.is-active .mini-header__action:hover {
